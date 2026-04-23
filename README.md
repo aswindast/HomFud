@@ -1,7 +1,10 @@
-## Welcome to your project
+## Welcome to HomFud Local Eats Hub
+
+A modern React application for connecting local chefs with customers, built with Vite, TypeScript, and Tailwind CSS.
 
 ## Project info
 
+**Repository**: https://github.com/aswindast/HomFud
 **URL**: (local development)
 
 ## How can I edit this code?
@@ -18,17 +21,30 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/aswindast/HomFud.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd homfud-local-eats-hub
 
 # Step 3: Install the necessary dependencies.
-npm i
+npm install
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
+
+## Deployment
+
+This project is configured for deployment on Vercel.
+
+### Deploy to Vercel
+
+1. Connect your GitHub account to Vercel
+2. Import the `HomFud` repository from GitHub
+3. Vercel will automatically detect the Vite configuration and deploy
+4. Your app will be available at a Vercel domain (e.g., `homfud.vercel.app`)
+
+The `vercel.json` file is already configured with the correct build settings.
 
 
 **Edit a file directly in GitHub**
