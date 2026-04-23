@@ -46,6 +46,31 @@ This project is configured for deployment on Vercel.
 
 The `vercel.json` file is already configured with the correct build settings.
 
+## Progressive Web App (PWA)
+
+HomFud is fully configured as a Progressive Web App with the following features:
+
+- **Installable**: Users can install the app on their devices
+- **Offline Support**: Basic caching for improved performance
+- **Native App Experience**: Standalone display mode with custom icons
+- **Cross-platform**: Works on desktop, mobile, and tablets
+
+### PWA Features
+
+- Web App Manifest (`public/manifest.json`)
+- Service Worker (`public/sw.js`) for caching
+- Responsive icons in multiple sizes
+- Theme color integration (#f97316)
+- Apple Touch icons for iOS devices
+
+### Icon Setup
+
+The PWA requires custom icons. Please replace the placeholder files in `public/icons/` with actual PNG icons:
+
+1. Visit `public/icons/README.md` for detailed instructions
+2. Generate icons using online tools or design software
+3. Replace placeholder files with actual PNG images
+4. Test the PWA installation on your device
 
 **Edit a file directly in GitHub**
 
