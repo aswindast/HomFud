@@ -3,22 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>homfud-local-eats-hub</title>
-    <meta name="description" content="Local Eats Hub project" />
-    <meta name="author" content="Local Eats Hub" />
+    <title>HomFud - Local Eats Hub</title>
+    <meta name="description" content="Connect with local chefs and enjoy authentic home-cooked meals" />
+    <meta name="author" content="HomFud" />
 
-    <meta property="og:title" content="homfud-local-eats-hub" />
-    <meta property="og:description" content="Local Eats Hub project" />
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#f97316" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="HomFud" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HomFud - Local Eats Hub" />
+    <meta property="og:description" content="Connect with local chefs and enjoy authentic home-cooked meals" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content="/icons/icon-512x512.png" />
 
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@localeatshub" />
-    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:title" content="HomFud - Local Eats Hub" />
+    <meta name="twitter:description" content="Connect with local chefs and enjoy authentic home-cooked meals" />
+    <meta name="twitter:image" content="/icons/icon-512x512.png" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
